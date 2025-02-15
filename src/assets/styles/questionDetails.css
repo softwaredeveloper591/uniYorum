@@ -1,0 +1,192 @@
+h3 {
+    margin-left: 10px;
+}
+
+.main__title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.question-details {
+    margin-bottom: 40px;
+    word-wrap: break-word;
+}
+
+.question-details h2 {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.question-details p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.answers-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.answer-item {
+    padding: 10px 10px 10px 0; /* Adjust padding */
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.answer-item p {
+    margin-left: 50px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-name {
+    margin-left: 10px;
+}
+
+.profile-name a {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-name a:hover {
+    text-decoration: underline;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Adjust margin if needed */
+    display: flex;
+    margin: 0 auto; /* Center the profile picture */
+}
+
+.form-group {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    background-color: #6c757d;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.main__content {
+    text-align: left;
+}
+
+.submit-answer {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex; /* Make the profile info section a flexbox */
+    align-items: center; /* Align items vertically center */
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 1px;
+}
+
+.submit-answer .form-group textarea {
+    flex: 1; /* Make the textarea fill remaining space */
+    width: 100%;
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom: -5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    border: none;
+    background-color: transparent;
+}
+.submit-answer .form-group textarea:focus {
+    display: inline;
+    outline: none; /* Removes the default focus outline */
+}
+
+.submit-answer .btn-success {
+    display: block;
+}
+
+/* Like and Dislike buttons custom styles */
+.voting .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #606060;
+    font-size: 1.5em;
+    margin-right: 2px; /* Reduce margin to bring them closer */
+}
+
+.voting .btn.clicked {
+    color: black !important; /* Change text color to black when clicked */
+}
+
+/* Additional styles to ensure fully black icons when clicked */
+.voting .btn.clicked i {
+    color: black !important;
+    fill: black !important; /* Fill the icon with black */
+}
+
+.voting .like-button.clicked,
+.voting .dislike-button.clicked {
+    color: black;
+}
+
+.voting .like-button.clicked i,
+.voting .dislike-button.clicked i {
+    color: black;
+}
+
+.voting .like-button {
+	margin-left: 50px;
+}
+
+.like-count,
+.like-button,
+.dislike-count,
+.dislike-button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.like-count {
+    margin-right: 5px; /* Adjust as needed */
+}
+
+.dislike-count {
+    margin-right: 3px; /* Adjust as needed */
+}

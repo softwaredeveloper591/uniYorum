@@ -1,0 +1,152 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --primary-color: hsl(200, 70%, 85%);
+  --secondary-color: hsl(200, 30%, 95%);
+  --accent-color: hsl(200, 70%, 60%);
+  --text-color: hsl(200, 30%, 20%);
+  --box-color: rgba(255, 255, 255, 0.9); /* Lightened box color */
+  --box-border-color: hsl(200, 20%, 80%);
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --university-text-color: hsl(200, 10%, 15%); /* Adjusted university text color */
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}  
+
+/*=============== MAIN CONTENT ===============*/
+.main {
+  margin-top: 6rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(0px); /* Added blur to main content */
+}
+
+.main__content {
+  text-align: center;
+}
+
+.main__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.universities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.university {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 255, 0.9)); /* Lighter gradient background */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--box-border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  backdrop-filter: blur(10px); /* Added a stronger blur to university box */
+}
+
+.university:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.university:hover .university__link {
+  color: hsl(200, 70%, 50%);
+}
+
+.university__link {
+  color: var(--university-text-color); /* Updated university text color */
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  display: block;
+  transition: color 0.3s;
+}
+
+.university__link:hover {
+  color: hsl(200, 70%, 50%); /* Lighter shade of the accent color */
+}
+
+/*=============== SEARCH INPUT ===============*/
+.search__input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5rem;
+  background: none;
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+}
+
+/*=============== ANIMATIONS ===============*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.university {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo_img {
+	height: 100px;
+}

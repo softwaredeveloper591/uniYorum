@@ -1,0 +1,318 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  width: 100%;
+}
+
+.login__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.login__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--white-color);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+}
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.title:hover {
+  transform: scale(1.2);
+}
+.login__content, .login__box {
+  display: grid;
+}
+.login__content {
+  row-gap: 1.75rem;
+}
+.login__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--white-color);
+}
+.login__icon, .eye {
+  font-size: 1.25rem;
+}
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+.login__box-input {
+  position: relative;
+}
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--font-medium);
+  transition: top 0.3s, font-size 0.3s;
+}
+.eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.login__check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login__check {
+  margin-bottom: 1.5rem;
+}
+.login__check-label, .login__forgot, .login__register {
+  font-size: var(--small-font-size);
+}
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+.login__forgot {
+  color: var(--white-color);
+  
+  text-align: center;
+}
+.login__forgot:hover {
+  text-decoration: underline;
+}
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.login__register {
+  text-align: center;
+}
+.login__register a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+/* Input focus move up label */
+.login__input:focus + .login__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+/* Input focus sticky top label */
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+/* Override autofill styles */
+.login__input:-webkit-autofill {
+    -webkit-box-shadow: none;
+    -webkit-text-fill-color: var(--white-color);
+    transition: background-color 5000s ease-in-out 0s;
+}  
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .login {
+    justify-content: center;
+  }
+  .login__form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+  .login__title {
+    font-size: 2rem;
+  }
+}
+
+.login-error{
+    color: #ff0000;
+    margin: 5px;   
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 15px;
+}
+
+
+/*==========Modal==========*/
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+}
+
+.modal-content {
+  background-color: hsla(0, 0%, 10%, 0.1); /* Similar to login form */
+  margin: 15% auto;
+  padding: 2rem;
+  border: 2px solid var(--white-color);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  color: var(--white-color);
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--black-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal input {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: var(--normal-font-size);
+  border-radius: 0.5rem;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  color: var(--white-color);
+}
+
+.modal button {
+  padding: 1rem;
+  font-size: var(--normal-font-size);
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  transition: background-color 0.3s ease;
+  width: 250px;
+}
+
+.modal button:hover {
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+.modal .error {
+  color: red;
+  margin-top: 1rem;
+}
+
+.forgot_password__input:-webkit-autofill,
+.forgot_password__input:-webkit-autofill:active {
+  -webkit-box-shadow: none;
+  -webkit-text-fill-color: var(--white-color);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*==========Change Password==========*/
+.change-password.error{
+  margin-top: 10px;
+  margin-bottom: 22px;
+  height: 22px;
+  color: red;
+}
+
+.change__button{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}

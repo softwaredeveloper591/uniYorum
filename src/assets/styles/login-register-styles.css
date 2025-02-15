@@ -1,0 +1,264 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-left: 20px;
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn{
+  border-radius: 36px;
+  background: #000000;
+  color: white;
+}
+form h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+form{
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+input{
+  height: 55px; 
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+  margin-top: 20px;
+}
+label{
+  display: block;
+  margin: 20px 0 0px;
+}
+button{
+  width: 100%;
+  background: #000000;
+  color: white;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 15px 12px 15px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.error{
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header{
+  display: flex;
+  align-items: center;
+}
+header img{
+  width: 250px;
+  margin-right: 40px;
+}
+header h2{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+header h3{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+header .btn{
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.recipes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80PX AUTO;
+  max-width: 1200px;
+}
+.recipe{
+  display: inline-block;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px
+}
+.recipe img{
+  width: 100px;
+  margin: -30px auto 20px;
+}
+footer{
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 0.8em; /* Change font size */
+}
+
+/* Target the Signup text inside anchor tags */
+.signup-text a {
+  color: blue; /* Change text color to blue */
+  font-weight: bold; /* Adjust font weight */
+}
+
+.forgot-password{
+  margin-top: 10px;
+  font-size: 0.8em; /* Change font size */
+  color: blue; /* Change text color to blue */
+  font-weight: bold; /* Adjust font weight */
+}
+
+.placeholder-input.placeholder-active::placeholder {
+  color: transparent; /* Hides the placeholder text when the input is focused */
+}
+
+.placeholder-input::placeholder {
+  font-size: 1em;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown.clicked .dropdown-content {
+  display: block;
+}
+
+.file-upload {
+  text-align: center;
+}
+
+.file-upload label {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Button background color */
+  color: rgb(0, 0, 0); /* Button text color */
+  cursor: pointer; /* Show pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.file-upload label:hover {
+  background-color: #ffffff; /* Darker background color on hover */
+}
+
+.file-upload input[type="file"] {
+  display: none; /* Hide the file input */
+}
+
+.separator {
+  border-bottom: 1px solid #ccc; /* Define the style of the line */
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+/* Style the select element */
+.custom-select {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  color: black;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 0.8em;
+  text-align: left;
+  appearance: none; /* Remove default arrow */
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Add the arrow using a pseudo-element */
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select-wrapper::after {
+  content: '\25BC'; /* Unicode character for downward-pointing triangle */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows clicking through the arrow */
+}
+
+/* Adjust the position of the arrow for smaller screens */
+@media screen and (max-width: 768px) {
+  .custom-select-wrapper::after {
+    right: 5px;
+  }
+}

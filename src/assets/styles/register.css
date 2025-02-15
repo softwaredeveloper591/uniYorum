@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --select-bg-color: hsl(210, 16%, 20%);
+  --select-text-color: hsl(0, 0%, 100%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button,
+select {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button,
+select {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*====================================*/
+.register {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.register__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.register__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--white-color);
+  margin-inline: auto;
+  padding: 5vw;
+  max-width: 600px;
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+}
+
+.register__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.title:hover {
+  transform: scale(1.2);
+}
+.register__content,
+.register__box {
+  display: grid;
+}
+
+.register__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--white-color);
+}
+
+.register__content .register__box.with-gap{
+  margin-bottom: 1.75rem;
+}
+
+.register__icon,
+.eye {
+  font-size: 1.25rem;
+}
+
+.eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.register__box-input {
+  position: relative;
+}
+
+.register__input,
+.custom-select {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+
+.register__input:focus + .register__label,
+.custom-select:focus + .register__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+.register__input:not(:placeholder-shown).register__input:not(:focus) + .register__label,
+.custom-select:not(:placeholder-shown).custom-select:not(:focus) + .register__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+.register__input:-webkit-autofill {
+  -webkit-box-shadow: none;
+  -webkit-text-fill-color: var(--white-color);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.register__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--font-medium);
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.register__login {
+  font-size: var(--small-font-size);
+}
+.register__login {
+  text-align: center;
+}
+.register__login a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+.register__login a:hover {
+  text-decoration: underline;
+}
+
+.register__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.custom-select {
+  background-color: transparent;
+  color: var(--select-text-color);
+}
+
+.custom-select option {
+  margin-right: 2rem;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  color: black;
+}
+/* or? colours are from root
+.custom-select option {
+  background-color: var(--select-bg-color);
+  color: var(--select-text-color);
+}
+*/
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .register {
+    justify-content: center;
+  }
+
+  .register__form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .register__title {
+    font-size: 2rem;
+  }
+}
+
+.duplicate.error, .email.error, .password.error{
+    color: #ff0000;
+    margin: 0.125rem;   
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 1.50rem;
+    display: none;
+}
+
+.gap_1, .gap_2 {
+  height: 1.75rem;
+  display: block;
+}
+
+.centered-message {
+  text-align: center;
+}

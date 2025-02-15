@@ -1,0 +1,100 @@
+/* fileContent.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.student-info, .file-info {
+    margin-bottom: 20px;
+}
+
+.student-info h1, .file-info h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+.student-info p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.file-content {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    animation: contentAppear 1s ease-in-out;
+}
+
+@keyframes contentAppear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

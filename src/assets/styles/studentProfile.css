@@ -1,0 +1,237 @@
+.profile-container {
+    margin: 100px;
+}
+
+.user-details-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.profile-picture:hover .overlay {
+    opacity: 1;
+}
+
+#uploadButton {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+#uploadButton i {
+    margin-right: 5px;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#confirmButton, #cancelButton {
+    width: 80px; /* Smaller width */
+    padding: 5px 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+}
+
+#confirmButton {
+    background-color: #4CAF50; /* Green for confirm */
+    transition: background-color 0.3s ease;
+}
+
+#confirmButton:hover {
+    background-color: #45a049; /* Darken on hover */
+}
+
+#cancelButton {
+    background-color: #f44336; /* Red for cancel */
+    transition: background-color 0.3s ease;
+}
+
+#cancelButton:hover {
+	background-color: #d32f2f; /* Darken on hover */
+}
+
+.user-details {
+    flex: 1;
+	margin-left: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.university-details, .answers-details {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    margin-bottom: 20px;
+}
+
+.university-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.university-link:hover {
+    text-decoration: underline;
+}
+
+.answer {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+}
+
+.question-text {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.question {
+	word-wrap: break-word;
+}
+
+@media (max-width: 1200px) {
+    .profile-container {
+        margin: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-container {
+        margin: 30px;
+    }
+    .user-details-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile-picture {
+        margin-bottom: 20px;
+    }
+    .user-details {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 20px;
+    }
+    .user-details-container {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-picture {
+        width: 80px; /* Adjust the size for smaller screens */
+        height: 80px;
+    }
+    .user-details {
+        margin-left: 0;
+        text-align: center; /* Center align text */
+    }
+    #buttonContainer {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #confirmButton, #cancelButton {
+        width: 100px;
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-container {
+        margin: 10px;
+        margin-top: 100px;
+    }
+    .user-details-container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-picture {
+        width: 80px; /* Adjust the size for smaller screens */
+        height: 80px;
+    }
+    .user-details {
+        margin-left: 0;
+        text-align: center; /* Center align text */
+    }
+    .university-details, .answers-details {
+        padding: 10px;
+    }
+}

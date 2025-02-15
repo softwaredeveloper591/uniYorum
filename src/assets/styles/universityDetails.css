@@ -1,0 +1,133 @@
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--box-border-color);
+    border-radius: 0.5rem;
+    background: none;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+	margin-top: 5px;
+}
+
+.btn-success {
+    background-color: hsl(120, 70%, 60%); /* Green color for success button */
+    color: var(--white-color);
+}
+
+.btn:hover {
+    background-color: hsl(200, 70%, 50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.questions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.question-link {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    word-wrap: break-word; /* This will ensure long words wrap and don't overflow */
+}
+
+.question-item {
+    border: 1px solid var(--box-border-color);
+    padding: 0;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background: var(--box-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* This will hide any overflow that is not wrapped */
+}
+
+
+.question-link:hover {
+    background-color: #f0f0f0;
+	border-radius: 0.5rem;
+}
+
+.answers-list {
+    list-style: none;
+    padding: 0;
+}
+
+.answer-item {
+    border-top: 1px solid var(--box-border-color);
+    padding: 0.5rem 0;
+}
+
+.answer-item:first-child {
+    border-top: none;
+}
+
+/* Fade-in animation for questions and answers */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.questions-list, .answers-list {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.answer-count {
+	color: green; /* Change to your desired color for answer count */
+}
+
+.submit-question {
+	margin-bottom: 20px;
+  }
+  
+  .submit-question .form-group textarea {
+	width: 100%;
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom: -5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .submit-question .form-group textarea:focus {
+	display: inline;
+	outline: none; /* Removes the default focus outline */
+  }
+  
+  .submit-question .btn-primary {
+	display: block;
+  }

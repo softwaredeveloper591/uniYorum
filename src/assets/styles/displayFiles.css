@@ -1,0 +1,130 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* Variables */
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --primary-color: hsl(200, 70%, 85%);
+  --secondary-color: hsl(200, 30%, 95%);
+  --accent-color: hsl(200, 70%, 60%);
+  --text-color: hsl(200, 30%, 20%);
+  --box-color: rgba(255, 255, 255, 0.9);
+  --box-border-color: hsl(200, 20%, 80%);
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --university-text-color: hsl(200, 10%, 15%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  background-image: url('/10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main Content */
+.main {
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(6px);
+}
+
+.main__content {
+  text-align: center;
+}
+
+.main__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* Admin Table */
+.admin__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.admin__table th,
+.admin__table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--box-border-color);
+}
+
+.admin__table th {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+.admin__table td {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+.admin__table a {
+  color: var(--accent-color);
+  font-weight: var(--font-medium);
+}
+
+.admin__table a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Add this CSS rule to admin.css */
+/* Add this CSS rule to admin.css */
+#adminTableBody tr{
+    transition: transform 0.3s ease;
+  }
+  
+  #adminTableBody tr:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
