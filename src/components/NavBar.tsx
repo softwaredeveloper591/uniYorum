@@ -1,5 +1,6 @@
-import  "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css";
+
 import { Link } from 'react-router-dom';
+import "../assets/styles/nav.css";
 
 export interface User {
     id: string;
