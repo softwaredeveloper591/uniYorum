@@ -56,12 +56,12 @@ function Universities() {
     //     status: 1
     //   }];
 
-    const universities= universityNames.map((name, index) => ({
+    const universities:University[]= universityNames.map((name, index) => ({
       uni_id: 100 + index,
       uni_name: name,
       il_id: getRandomInt(1, 81),
-      status: 1
-    }));
+      status: 1,
+    })); 
 
         
       const filteredUniversities = universities.filter(university =>
