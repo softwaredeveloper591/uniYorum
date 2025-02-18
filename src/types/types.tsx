@@ -31,3 +31,13 @@ export interface University {
     profilePicture?: string;
     username: string;
   }
+
+  export interface Student {
+    id: number;
+    username: string;
+  }
+
+  export interface StudentFile {
+    fileName: string;
+    Student: Student;
+  }

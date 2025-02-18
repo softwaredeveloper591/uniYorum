@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom'
 import UniPage from './pages/UniPage'
 import QuestionPage from './pages/QuestionPage'
 import RegisterPage from './pages/RegisterPage'
+import AdminShowFilesPage from './types/AdminShowFilesPage'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
         {/* <UniPage /> */}
         {/* <QuestionPage /> */}
           {/* <RegisterPage /> */}
-          <LoginPage />
+          {/* <LoginPage /> */}
+          <AdminShowFilesPage />
     </div>
   )
 }
