@@ -15,7 +15,7 @@ interface UniversityState {
   };
 
   export const fetchUniversities = createAsyncThunk('universities/fetchUniversities', async () => {
-    const response = await axios.get('http://localhost:3000/universities');
+    const response = await axios.get(import.meta.env.VITE_API_URL+'/universities');
     return response.data as University[];
   });
 

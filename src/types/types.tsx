@@ -35,9 +35,25 @@ export interface University {
   export interface Student {
     id: number;
     username: string;
+    email: string;
   }
 
   export interface StudentFile {
     fileName: string;
     Student: Student;
+  }
+
+  export interface File {
+    id: number;
+    fileName: string;
+    mimeType: string;
+    studentId: number;
+    fileData: Uint8Array|null;
+  }
+
+  export interface FileContent {
+    student: Student;
+    file: File;
+    uniName: string;
+    departmentName: string;
   }

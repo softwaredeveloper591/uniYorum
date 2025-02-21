@@ -5,7 +5,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStudentFiles } from '../redux/studentFilesSlice';
 import { AppDispatch, RootState } from '../redux/store';
-import { StudentFile } from './types';
+import { StudentFile } from '../types/types';
+import NavBar from '../components/NavBar';
 
 function AdminShowFilesPage() {
     const navigate = useNavigate();
@@ -22,21 +23,24 @@ function AdminShowFilesPage() {
             fileName: "file1",
             Student: {
                 id: 1,
-                username: "student1"
+                username: "student1",
+                email: ""
             }
         },
         {
             fileName: "file2",
             Student: {
                 id: 2,
-                username: "student2"
+                username: "student2",
+                email: ""
             }
         },
         {
             fileName: "file3",
             Student: {
                 id: 3,
-                username: "student3"
+                username: "student3",
+                email: ""
             }
         }]
 
@@ -45,6 +49,8 @@ function AdminShowFilesPage() {
 
 
   return (
+    <>
+    <NavBar user={{userType: 'admin', id: "1"}} />
     <main className="main">
       <div className="main__content">
         <h1 className="main__title">Admin Panel</h1>
@@ -68,6 +74,7 @@ function AdminShowFilesPage() {
         </table>
       </div>
         </main>
+        </>
   )
 }
 

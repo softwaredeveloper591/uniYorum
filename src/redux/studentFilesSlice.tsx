@@ -14,8 +14,9 @@ const initialState: StudentFileState = {
     error: null,
 };
 
+
 export const fetchStudentFiles = createAsyncThunk('/file', async () => {
-    const response = await axios.get('http://localhost:3000/universities');
+    const response = await axios.get(import.meta.env.VITE_API_URL+'/universities');
     return response.data as StudentFile[];
   });
 

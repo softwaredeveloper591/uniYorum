@@ -25,7 +25,7 @@ function NavBar({ user }: { user: User | null }) {
               )}
               {user.userType === 'admin' && (
                 <li className="nav__item">
-                  <Link to="/displayFiles" className="nav__link">Registration Verification</Link>
+                  <Link to="/displayFiles" className="nav__link">Registration</Link>
                 </li>
               )}
               <li className="nav__item">
