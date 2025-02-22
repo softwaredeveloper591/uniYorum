@@ -11,6 +11,7 @@ function AdminFileContentPage() {
     const [fileContent, setFileContent] = useState<FileContent | null>(null);
     const navigate = useNavigate();
 
+    //burada sayfadaki content in id değiştiğinde değişmemesi lazım çünkü sadece başlangıçta atılan bir istekmiş gibi yazılmış.
   //   useEffect(() => {
   //     // Fetch file content
   //     fetch(`/getFileContent/${fileId}`)

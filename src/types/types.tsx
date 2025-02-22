@@ -57,3 +57,12 @@ export interface University {
     uniName: string;
     departmentName: string;
   }
+
+  export interface StudentProfile {
+    id: number;
+    username: string;
+    email: string;
+    profilePicture?: string;
+    University: University;
+    Department: string;
+  }

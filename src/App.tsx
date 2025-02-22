@@ -7,6 +7,7 @@ import QuestionPage from './pages/QuestionPage'
 import RegisterPage from './pages/RegisterPage'
 import AdminShowFilesPage from './pages/AdminShowFilesPage'
 import AdminFileContentPage from './pages/AdminFileContentPage'
+import StudentProfile from './pages/StudentProfile'
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
           {/* <RegisterPage /> */}
           {/* <LoginPage /> */}
           {/* <AdminShowFilesPage /> */}
-          <AdminFileContentPage />
+          {/* <AdminFileContentPage /> */}
+          <StudentProfile/>
     </div>
   )
 }
